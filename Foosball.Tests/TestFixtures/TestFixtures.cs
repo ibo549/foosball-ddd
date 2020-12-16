@@ -9,7 +9,7 @@ using CQRSlite.Domain.Exception;
 using CQRSlite.Events;
 using CQRSlite.Snapshotting;
 
-namespace BattleShip.Domain.Tests.TestFixtures
+namespace Foosball.Domain.Tests.TestFixtures
 {
     public abstract class Specification<TAggregate, THandler, TCommand> 
         where TAggregate: AggregateRoot

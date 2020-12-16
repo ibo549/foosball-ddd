@@ -1,6 +1,6 @@
 using Xunit;
 
-namespace BattleShip.Domain.Tests.TestFixtures
+namespace Foosball.Domain.Tests.TestFixtures
 {
     public class ThenAttribute : FactAttribute
     {
