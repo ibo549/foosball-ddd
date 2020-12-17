@@ -1,6 +1,5 @@
 using System;
-using System.Collections.Generic;
-using Foosball.Projections.Dtos;
+using Foosball.Persistance.ProjectionStore.Entites;
 using CQRSlite.Queries;
 
 namespace Foosball.Projections.Queries

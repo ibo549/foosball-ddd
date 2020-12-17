@@ -1,22 +1,22 @@
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Foosball.Projections.Dtos;
+using Foosball.Persistance.ProjectionStore.Entites;
 using Foosball.Domain.Events;
-using Foosball.Projections.Infrastructure;
+using Foosball.Persistance.ProjectionStore;
 using Foosball.Projections.Queries;
 using CQRSlite.Events;
 using CQRSlite.Queries;
 
 namespace Foosball.Projections.Handlers
 {
-	public class FoosballGameListView: ICancellableEventHandler<FoosballGameCreated>,
+	public class FoosballGameListHandler : ICancellableEventHandler<FoosballGameCreated>,
 	    ICancellableEventHandler<SetFinished>,
         ICancellableQueryHandler<GetFoosballGames, IReadOnlyCollection<FoosballGameListItem>>
     {
         private readonly IProjectionStore _store;
 
-        public FoosballGameListView(IProjectionStore store)
+        public FoosballGameListHandler(IProjectionStore store)
         {
             _store = store;
         }

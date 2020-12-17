@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Foosball.Projections.Dtos
+namespace Foosball.Persistance.ProjectionStore.Entites
 {
     public class FoosballGameDetails
     {

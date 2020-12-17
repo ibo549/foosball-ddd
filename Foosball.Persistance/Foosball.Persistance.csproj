@@ -3,13 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
-  
   <ItemGroup>
     <PackageReference Include="CqrsLite" Version="1.33.0" />
-  </ItemGroup>
-  
-  <ItemGroup>
-    <ProjectReference Include="..\Foosball.Domain\Foosball.Domain.csproj" />
-    <ProjectReference Include="..\Foosball.Persistance\Foosball.Persistance.csproj" />
   </ItemGroup>
 </Project>

@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using Foosball.Projections.Dtos;
+using Foosball.Persistance.ProjectionStore.Entites;
 
-namespace Foosball.Projections.Infrastructure
+namespace Foosball.Persistance.ProjectionStore
 {
     public interface IProjectionStore 
     {

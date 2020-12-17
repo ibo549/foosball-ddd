@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foosball.Tests", "Foosball.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foosball.Projections", "Foosball.Projections\Foosball.Projections.csproj", "{315B55D5-6FED-4F71-8C0A-887D1300AE4B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foosball.Persistance", "Foosball.Persistance\Foosball.Persistance.csproj", "{4E933AE7-1F62-4623-9746-C1B81EE2F849}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,5 +60,17 @@ Global
 		{315B55D5-6FED-4F71-8C0A-887D1300AE4B}.Release|x64.Build.0 = Release|Any CPU
 		{315B55D5-6FED-4F71-8C0A-887D1300AE4B}.Release|x86.ActiveCfg = Release|Any CPU
 		{315B55D5-6FED-4F71-8C0A-887D1300AE4B}.Release|x86.Build.0 = Release|Any CPU
+		{4E933AE7-1F62-4623-9746-C1B81EE2F849}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E933AE7-1F62-4623-9746-C1B81EE2F849}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E933AE7-1F62-4623-9746-C1B81EE2F849}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{4E933AE7-1F62-4623-9746-C1B81EE2F849}.Debug|x64.Build.0 = Debug|Any CPU
+		{4E933AE7-1F62-4623-9746-C1B81EE2F849}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4E933AE7-1F62-4623-9746-C1B81EE2F849}.Debug|x86.Build.0 = Debug|Any CPU
+		{4E933AE7-1F62-4623-9746-C1B81EE2F849}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E933AE7-1F62-4623-9746-C1B81EE2F849}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E933AE7-1F62-4623-9746-C1B81EE2F849}.Release|x64.ActiveCfg = Release|Any CPU
+		{4E933AE7-1F62-4623-9746-C1B81EE2F849}.Release|x64.Build.0 = Release|Any CPU
+		{4E933AE7-1F62-4623-9746-C1B81EE2F849}.Release|x86.ActiveCfg = Release|Any CPU
+		{4E933AE7-1F62-4623-9746-C1B81EE2F849}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
