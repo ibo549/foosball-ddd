@@ -21,13 +21,13 @@ namespace Foosball.Persistance.ProjectionStore
 
         public void AddGoal(Guid gameId, int setNumber, string scorer, DateTimeOffset scoredAt)
         {
-           var game = _details.FirstOrDefault(x=> x.GameId == gameId);
+           var game = _details.FirstOrDefault(x=> x.Id == gameId);
            game?.AddGoal(setNumber, scorer, scoredAt);
         }
 
         public void AddSetWin(Guid gameId, string winningTeam)
         {
-            var game = _listItems.FirstOrDefault(x => x.GameId == gameId);
+            var game = _listItems.FirstOrDefault(x => x.Id == gameId);
             game?.AddSetWin(winningTeam);
         }
 
@@ -38,7 +38,7 @@ namespace Foosball.Persistance.ProjectionStore
 
         public FoosballGameDetails GetGameDetails(Guid id)
         {
-            return _details.FirstOrDefault(x => x.GameId == id);
+            return _details.FirstOrDefault(x => x.Id == id);
         }
     }
 }

@@ -1,10 +1,7 @@
-using System.Linq;
-using System.Reflection;
 using CQRSlite.Caching;
 using CQRSlite.Commands;
 using CQRSlite.Domain;
 using CQRSlite.Events;
-using CQRSlite.Messages;
 using CQRSlite.Queries;
 using CQRSlite.Routing;
 using Foosball.Domain.CommandHandlers;
@@ -69,9 +66,9 @@ namespace Foosball.WebApi
             services.AddScoped<IQueryHandler<GetFoosballGameDetails, FoosballGameDetails>, FoosballGameDetailsHandler>();
             services.AddScoped<ICancellableQueryHandler<GetFoosballGames, IReadOnlyCollection<FoosballGameListItem>>, FoosballGameListHandler>();
 
-            //Persistance - Use In Memory Store
-           
-            services.AddSingleton<IProjectionStore, InMemoryProjectionStore>();
+            //Persistance
+            //If you want to Use In Memory Store: services.AddSingleton<IProjectionStore, InMemoryProjectionStore>();        
+            services.AddSingleton<IProjectionStore, LiteDbProjectionStore>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
