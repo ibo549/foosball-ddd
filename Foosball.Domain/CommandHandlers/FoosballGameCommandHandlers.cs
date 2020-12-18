@@ -1,3 +1,4 @@
+using System.Threading;
 using System.Threading.Tasks;
 using CQRSlite.Commands;
 using CQRSlite.Domain;
@@ -29,6 +30,5 @@ namespace Foosball.Domain.CommandHandlers
             foosballGame.RecordGoal(message.ScoringTeam);
             await _session.Commit();
         }
-
     }
 }

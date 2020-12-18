@@ -27,7 +27,7 @@ namespace Foosball.Persistance.ProjectionStore
 
         public void AddSetWin(Guid gameId, string winningTeam)
         {
-            var game = _listItems.FirstOrDefault();
+            var game = _listItems.FirstOrDefault(x => x.GameId == gameId);
             game?.AddSetWin(winningTeam);
         }
 

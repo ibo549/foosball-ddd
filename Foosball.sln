@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foosball.WebApi", "Foosball.WebApi\Foosball.WebApi.csproj", "{6446D7A2-B653-4D80-BE2F-00ECC6B0381D}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foosball.Domain", "Foosball.Domain\Foosball.Domain.csproj", "{28EEC4FA-7ECC-4811-984A-9EF3F70A1D11}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foosball.Tests", "Foosball.Tests\Foosball.Tests.csproj", "{4CEAFE0B-125D-4FD3-8293-D114AC3A3A11}"
@@ -24,6 +26,18 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+	{6446D7A2-B653-4D80-BE2F-00ECC6B0381D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6446D7A2-B653-4D80-BE2F-00ECC6B0381D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6446D7A2-B653-4D80-BE2F-00ECC6B0381D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6446D7A2-B653-4D80-BE2F-00ECC6B0381D}.Debug|x64.Build.0 = Debug|Any CPU
+		{6446D7A2-B653-4D80-BE2F-00ECC6B0381D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6446D7A2-B653-4D80-BE2F-00ECC6B0381D}.Debug|x86.Build.0 = Debug|Any CPU
+		{6446D7A2-B653-4D80-BE2F-00ECC6B0381D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6446D7A2-B653-4D80-BE2F-00ECC6B0381D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6446D7A2-B653-4D80-BE2F-00ECC6B0381D}.Release|x64.ActiveCfg = Release|Any CPU
+		{6446D7A2-B653-4D80-BE2F-00ECC6B0381D}.Release|x64.Build.0 = Release|Any CPU
+		{6446D7A2-B653-4D80-BE2F-00ECC6B0381D}.Release|x86.ActiveCfg = Release|Any CPU
+		{6446D7A2-B653-4D80-BE2F-00ECC6B0381D}.Release|x86.Build.0 = Release|Any CPU
 		{28EEC4FA-7ECC-4811-984A-9EF3F70A1D11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{28EEC4FA-7ECC-4811-984A-9EF3F70A1D11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28EEC4FA-7ECC-4811-984A-9EF3F70A1D11}.Debug|x64.ActiveCfg = Debug|Any CPU

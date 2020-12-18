@@ -5,7 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using CQRSlite.Events;
 
-namespace BattleShip.Domain
+namespace Foosball.Persistance.EventStore
 {
     public class InMemoryEventStore : IEventStore
     {

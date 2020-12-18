@@ -9,9 +9,9 @@ using CQRSlite.Queries;
 
 namespace Foosball.Projections.Handlers
 {
-	public class FoosballGameDetailsHandler: ICancellableEventHandler<FoosballGameCreated>,
-	    ICancellableEventHandler<GoalScored>,
-	    ICancellableQueryHandler<GetFoosballGameDetails, FoosballGameDetails>
+	public class FoosballGameDetailsHandler: IEventHandler<FoosballGameCreated>,
+	    IEventHandler<GoalScored>,
+	    IQueryHandler<GetFoosballGameDetails, FoosballGameDetails>
     {
         private readonly IProjectionStore _store;
 
@@ -20,19 +20,19 @@ namespace Foosball.Projections.Handlers
             _store = store;
         }
 
-        public Task Handle(FoosballGameCreated message, CancellationToken token)
+        public Task Handle(FoosballGameCreated message)
         {
             _store.AddFoosballGameDetails(new FoosballGameDetails(message.Id));
             return Task.CompletedTask;
         }
 
-        public Task Handle(GoalScored message, CancellationToken token)
+        public Task Handle(GoalScored message)
         {
             _store.AddGoal(message.Id, message.SetNumber, message.Scorer, message.TimeStamp);
             return Task.CompletedTask;
         }
 
-        public Task<FoosballGameDetails> Handle(GetFoosballGameDetails message, CancellationToken token = default)
+        public Task<FoosballGameDetails> Handle(GetFoosballGameDetails message)
         {
             return Task.FromResult(_store.GetGameDetails(message.Id));
         }
