@@ -3,11 +3,11 @@ using CQRSlite.Events;
 
 namespace Foosball.Domain.Events
 {
-    public class GoalScored : IEvent 
-	{
-        public readonly string Scorer;
-        public readonly int SetNumber;
-        public GoalScored(Guid id, string scorer, int setNumber) 
+    public class GoalScored : IEvent
+    {
+        public string Scorer { get; private set; }
+        public int SetNumber { get; private set; }
+        public GoalScored(Guid id, string scorer, int setNumber)
         {
             Id = id;
             Scorer = scorer;
@@ -17,5 +17,5 @@ namespace Foosball.Domain.Events
         public Guid Id { get; set; }
         public int Version { get; set; }
         public DateTimeOffset TimeStamp { get; set; }
-	}
+    }
 }

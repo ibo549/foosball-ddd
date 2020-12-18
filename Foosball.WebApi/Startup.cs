@@ -44,7 +44,8 @@ namespace Foosball.WebApi
             services.AddSingleton<IEventPublisher>(y => y.GetService<Router>());
             services.AddSingleton<IHandlerRegistrar>(y => y.GetService<Router>());
             services.AddSingleton<IQueryProcessor>(y => y.GetService<Router>());
-            services.AddSingleton<IEventStore, InMemoryEventStore>();
+            //To Use In Memory Store: services.AddSingleton<IEventStore, InMemoryEventStore>();
+            services.AddSingleton<IEventStore, LiteDbEventStore>();
             services.AddSingleton<ICache, MemoryCache>();
             services.AddScoped<IRepository>(y => new CacheRepository(new Repository(y.GetService<IEventStore>()), y.GetService<IEventStore>(), y.GetService<ICache>()));
             services.AddScoped<ISession, Session>();
@@ -67,7 +68,7 @@ namespace Foosball.WebApi
             services.AddScoped<ICancellableQueryHandler<GetFoosballGames, IReadOnlyCollection<FoosballGameListItem>>, FoosballGameListHandler>();
 
             //Persistance
-            //If you want to Use In Memory Store: services.AddSingleton<IProjectionStore, InMemoryProjectionStore>();        
+            //To Use In Memory Store: services.AddSingleton<IProjectionStore, InMemoryProjectionStore>();        
             services.AddSingleton<IProjectionStore, LiteDbProjectionStore>();
 
             services.AddControllers();

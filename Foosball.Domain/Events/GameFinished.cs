@@ -5,7 +5,7 @@ namespace Foosball.Domain.Events
 {
     public class GameFinished : IEvent 
 	{
-        public readonly string Winner;
+        public  string Winner {get; private set;}
         public GameFinished(Guid id, string winner) 
         {
             Id = id;

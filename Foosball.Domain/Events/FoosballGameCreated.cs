@@ -5,9 +5,9 @@ namespace Foosball.Domain.Events
 {
     public class FoosballGameCreated : IEvent 
 	{
-        public readonly string TeamA;
-        public readonly string TeamB;
-        public readonly int SetsToWin;
+        public string TeamA {get; private set;}
+        public string TeamB {get; private set;}
+        public int SetsToWin {get; private set;}
         public FoosballGameCreated(Guid id, string teamA, string teamB, int setsToWin) 
         {
             Id = id;
