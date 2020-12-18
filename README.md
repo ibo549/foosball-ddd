@@ -11,7 +11,7 @@ A framework to track foosball games at the office, using Domain-Driven-Design as
 - `dotnet run`
 - Application host will be listening on http://localhost:5000 and https://localhost:5001
 - Check swagger documentation for API end-points and try it out: http://localhost:5000/swagger
-- * Tested in macOS, Windows 10
+- Tested in macOS, Windows 10
 
 ### Foosball.Domain
 `FoosballGame` is the **Aggregate Root**. 
