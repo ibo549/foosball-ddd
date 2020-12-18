@@ -15,15 +15,16 @@ A framework to track foosball games at the office, using Domain-Driven-Design as
 
 ### Foosball.Domain
 `FoosballGame` is the **Aggregate Root**. 
-Aggregate state is restored from the events store and it's the source of truth. The state changes occurs in Domain first. (Writes)
+Aggregate state is restored from the events store and it's the single source of truth. The state changes occurs in Domain (Writes) and gets published to interested parties via events. 
 
-Events are persisted in a NoSQL document store using [LiteDB](https://www.litedb.org/).
+Events are persisted within a NoSQL document store using [LiteDB](https://www.litedb.org/). Tho, they could've been stored in a regular SQL database as well.
+
 If the event store db/collection doesn't exist, it gets auto created. Document appears in the project root as _FoosballEventStore_. If you want to 'clear' the persisted data, just delete the document.
 
-It also utilizes a lightweight framework called [CQRSlite](https://github.com/gautema/CQRSlite) underneath to achieve event sourcing, restoring aggregate state, syncing changes, routing the events to consumers etc.
+It utilizes a lightweight framework called [CQRSlite](https://github.com/gautema/CQRSlite) underneath to achieve event sourcing, restoring aggregate state, syncing changes, routing the events to consumers etc.
 
 ### Foosball.Projections
-It gets built from the events happening in the domain and entites are stored in NoSQL document collection as well (_FoosballProjections_).
+Projection data (Reads) gets built from the events happening in the domain and entites are stored in NoSQL document collection as well (_FoosballProjections_).
 These 2 representations of the data are [eventually consistent](https://en.wikipedia.org/wiki/Eventual_consistency). 
 When an API user queries the system and wants to read - the results are served from the projections.
 
